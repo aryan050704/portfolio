@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Singh — AI & Data Science Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AS</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Aryan Singh</h1>
+      <div class="hero-title-wrap">
+        <span class="hero-title-static">I build </span>
+        <span class="hero-title-dynamic" id="dynamicText"></span>
+      </div>
+      <p class="hero-description">
+        Final-year B.E. student in AI &amp; Data Science at VESIT, Mumbai.<br>
+        Building end-to-end ML systems, LLM applications, and data pipelines.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/Resume_Aryan.pdf" class="btn btn-outline" download>Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/aryan050704" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aryan-singh-ai" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:2022.aryan.singh@ves.ac.in" class="social-icon" title="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a final-year <strong>B.E. student in Artificial Intelligence and Data Science</strong> at Vivekanand Education Society's Institute of Technology (VESIT), Mumbai, graduating in May 2026.</p>
+          <p>My work sits at the intersection of <strong>machine learning engineering</strong>, <strong>LLM applications</strong>, and <strong>data infrastructure</strong>. I've built production anomaly detection systems on AWS SageMaker, designed prompt optimization pipelines for LLMs, and developed full-stack ML dashboards.</p>
+          <p>I'm particularly interested in <strong>MLOps</strong>, <strong>RAG systems</strong>, and <strong>multi-agent AI architectures</strong> — areas where research meets real-world deployment challenges.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">8.19</span><span class="stat-label">CGPA</span></div>
+            <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Internships</span></div>
+            <div class="stat"><span class="stat-num">7</span><span class="stat-label">Certifications</span></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-inner">
+            <div class="about-card-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">aryan@vesit:~$</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-key">name</span>        <span class="t-arrow">=</span> <span class="t-val">"Aryan Singh"</span></p>
+              <p><span class="t-key">role</span>        <span class="t-arrow">=</span> <span class="t-val">"AI/ML Engineer"</span></p>
+              <p><span class="t-key">location</span>    <span class="t-arrow">=</span> <span class="t-val">"Mumbai, India"</span></p>
+              <p><span class="t-key">education</span>   <span class="t-arrow">=</span> <span class="t-val">"B.E. AI & DS"</span></p>
+              <p><span class="t-key">interests</span>   <span class="t-arrow">=</span> <span class="t-val">["LLMs", "MLOps", "RAG"]</span></p>
+              <p><span class="t-key">available</span>   <span class="t-arrow">=</span> <span class="t-val t-green">True</span></p>
+              <p class="t-cursor">█</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Data Science / ML Intern</h3>
+              <span class="timeline-company">Sensor Equation</span>
+              <span class="timeline-date">May 2025 – July 2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built an anomaly detection system on AC time-series sensor data using <strong>Isolation Forest</strong> for predictive maintenance — achieved F1-score of <strong>0.80</strong>.</li>
+              <li>Processed data using <strong>AWS SageMaker</strong> with Redshift integration; handled cleaning, feature engineering, and model training at scale.</li>
+              <li>Developed an <strong>LSTM-based model</strong> to predict future maintenance dates, improving proactive scheduling accuracy.</li>
+              <li>Mapped model anomaly windows to real maintenance periods, validating production deployment.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Python</span><span class="tag">AWS SageMaker</span><span class="tag">Isolation Forest</span><span class="tag">LSTM</span><span class="tag">Redshift</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full-Stack Developer Intern</h3>
+              <span class="timeline-company">Menstrual Health App (College)</span>
+              <span class="timeline-date">Jan 2024 – Mar 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built a full-stack menstrual health web app with cycle tracking, symptom logging, ML-based predictions, and reminders.</li>
+              <li>Designed and implemented REST API backend with Django; integrated predictive cycle model using historical user data.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Django</span><span class="tag">Python</span><span class="tag">ML</span><span class="tag">Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Flutter Developer Intern</h3>
+              <span class="timeline-company">Studio Management App (College)</span>
+              <span class="timeline-date">Aug 2023 – Oct 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built a Flutter + Firebase Android app for studio bookings, schedules, and inventory management.</li>
+              <li>Implemented real-time updates using Firestore; deployed to 20+ studio staff users.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Dart</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">End-to-end ML systems, LLM applications, and data engineering tools.</p>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">ML / AI</button>
+        <button class="filter-btn" data-filter="llm">LLM</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="iot">IoT</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-tags="ml llm" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">🤖</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/multi-agent-research" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Multi-Agent Research Assistant</h3>
+          <p class="project-desc">Planner → Researcher → Summarizer agent pipeline that decomposes complex questions, researches each independently, and synthesizes a final answer.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Ollama</span><span class="tech-tag">LangChain</span><span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-badge featured">Featured</div>
+        </div>
+
+        <div class="project-card" data-tags="ml llm" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">📚</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/rag-document-intelligence" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">RAG Document Intelligence</h3>
+          <p class="project-desc">Fully local RAG system: PDF/DOCX ingestion, FAISS vector search with sentence-transformers embeddings, and a Streamlit chat interface. No API key needed.</p>
+          <div class="project-tech">
+            <span class="tech-tag">FAISS</span><span class="tech-tag">sentence-transformers</span><span class="tech-tag">PyMuPDF</span><span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-badge featured">Featured</div>
+        </div>
+
+        <div class="project-card" data-tags="ml" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">📈</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/stock-forecast-engine" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Stock Forecast Engine</h3>
+          <p class="project-desc">XGBoost + LSTM ensemble for stock direction forecasting with 20+ technical indicators (RSI, MACD, Bollinger Bands) and a full backtesting framework vs buy & hold.</p>
+          <div class="project-tech">
+            <span class="tech-tag">XGBoost</span><span class="tech-tag">PyTorch</span><span class="tech-tag">yfinance</span><span class="tech-tag">Backtesting</span>
+          </div>
+          <div class="project-badge featured">Featured</div>
+        </div>
+
+        <div class="project-card" data-tags="ml" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">🔍</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/ml-model-monitor" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">ML Model Monitor</h3>
+          <p class="project-desc">Production-grade drift detection using PSI, KS test, and KL divergence. Tracks performance degradation over sliding windows with a real-time alerting dashboard.</p>
+          <div class="project-tech">
+            <span class="tech-tag">SciPy</span><span class="tech-tag">PSI</span><span class="tech-tag">KS Test</span><span class="tech-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="ml" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">⚡</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/time-series-anomaly-detector" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Time-Series Anomaly Detector</h3>
+          <p class="project-desc">Isolation Forest dashboard for sensor data anomaly detection with rolling statistical features (mean, std, diff). Supports CSV upload and anomaly score visualization.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Isolation Forest</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="ml" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">🧪</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/automl-pipeline" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AutoML Pipeline</h3>
+          <p class="project-desc">End-to-end automated ML: feature engineering (interactions, log transforms), 5-model grid search CV, visual model comparison dashboard with feature importances.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Scikit-learn</span><span class="tech-tag">Grid Search</span><span class="tech-tag">Auto Feature Eng.</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="llm" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">💬</div>
+            <div class="project-links">
+              <a href="https://github.com/aryan050704/llm-prompt-optimizer" target="_blank" rel="noopener" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">LLM Prompt Optimizer</h3>
+          <p class="project-desc">Token efficiency analyzer for LLM prompts. Detects redundancy, scores clarity, auto-generates optimized prompts with up to 35% token reduction using tiktoken.</p>
+          <div class="project-tech">
+            <span class="tech-tag">tiktoken</span><span class="tech-tag">NLP</span><span class="tech-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="ml fullstack" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">🎓</div>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">Prompt Optimization in LLMs (FYP)</h3>
+          <p class="project-desc">Final year project: prompt optimization techniques for LLMs with IoT sensor integration for real-time industrial anomaly detection. Applied Liquid Neural Networks for adaptive learning.</p>
+          <div class="project-tech">
+            <span class="tech-tag">LLMs</span><span class="tech-tag">IoT</span><span class="tech-tag">Liquid Neural Networks</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="fullstack iot" data-animate>
+          <div class="project-card-header">
+            <div class="project-icon">🚌</div>
+            <div class="project-links"></div>
+          </div>
+          <h3 class="project-title">Bus Booking Application</h3>
+          <p class="project-desc">Flutter + Firebase Android app enabling real-time seat booking and schedule updates for college transport management.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span><span class="tech-tag">Firebase</span><span class="tech-tag">Dart</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🐍</span> Languages
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🧠</span> ML / AI
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">PyTorch</span>
+            <span class="skill-tag primary">Scikit-learn</span>
+            <span class="skill-tag primary">XGBoost</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">sentence-transformers</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🤖</span> LLM / Agents
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">RAG</span>
+            <span class="skill-tag primary">Prompt Engineering</span>
+            <span class="skill-tag">Ollama</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Multi-Agent Systems</span>
+            <span class="skill-tag">tiktoken</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">☁️</span> Cloud / MLOps
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">AWS SageMaker</span>
+            <span class="skill-tag primary">AWS Redshift</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Drift Detection</span>
+            <span class="skill-tag">Model Monitoring</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🛠️</span> Frameworks / Tools
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">Streamlit</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">R Studio</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-animate>
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🗄️</span> Databases
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Firebase Firestore</span>
+            <span class="skill-tag">AWS Redshift</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card" data-animate>
+          <div class="edu-year">2022 – 2026</div>
+          <div class="edu-content">
+            <h3>B.E. in Artificial Intelligence and Data Science</h3>
+            <p class="edu-institution">Vivekanand Education Society's Institute of Technology (VESIT), Mumbai</p>
+            <div class="edu-score">CGPA: <strong>8.19</strong></div>
+            <div class="edu-tags">
+              <span class="tag">AI/ML</span><span class="tag">Data Science</span><span class="tag">Deep Learning</span><span class="tag">NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card" data-animate>
+          <div class="edu-year">2019 – 2021</div>
+          <div class="edu-content">
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p class="edu-institution">Chinmaya Vidyalaya, Boisar — CBSE Board</p>
+            <div class="edu-score">Score: <strong>89.4%</strong></div>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="section-title" style="margin-top: 4rem;">Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">Google / Coursera</div>
+          <div class="cert-name">IT Automation with Python Professional Certificate</div>
+        </div>
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">Udemy</div>
+          <div class="cert-name">Machine Learning A–Z: Hands-On Python &amp; R in Data Science</div>
+        </div>
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">Oracle</div>
+          <div class="cert-name">Oracle Certified Java Developer</div>
+        </div>
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">IBM Skills Network</div>
+          <div class="cert-name">Data Science Foundations</div>
+        </div>
+        <div class="cert-card" data-animate>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <div class="cert-name">AWS Cloud Foundations + AWS Essentials</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">I'm actively looking for full-time roles in ML Engineering, Data Science, and AI. Open to internships and collaborations too.</p>
+      <div class="contact-grid">
+        <a href="mailto:2022.aryan.singh@ves.ac.in" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">2022.aryan.singh@ves.ac.in</div>
+        </a>
+        <a href="https://github.com/aryan050704" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">github.com/aryan050704</div>
+        </a>
+        <a href="tel:+919158634993" class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">+91 91586 34993</div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Chembur, Mumbai</div>
+        </div>
+      </div>
+      <div class="contact-cta">
+        <a href="mailto:2022.aryan.singh@ves.ac.in" class="btn btn-primary btn-large">Say Hello 👋</a>
+        <a href="assets/Resume_Aryan.pdf" class="btn btn-outline btn-large" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Designed &amp; built by <strong>Aryan Singh</strong> · 2025</p>
+    <p class="footer-sub">B.E. AI &amp; DS · VESIT Mumbai · Open to opportunities</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
